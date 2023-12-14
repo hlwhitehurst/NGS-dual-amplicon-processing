@@ -88,3 +88,14 @@ All scripts were run on the NYU Greene HPC, except for the Figaro script which w
 | 04a_ReadCounts.sh | Perform read counts on all files to track how many reads were removed/carried through each step. This is particularly useful to catch any steps that are disporoportionally causing the loss of reads. |
 | 04b_HouseKeeping.sh | Should be done after reviewing the read counts. Removes all intermediate files, then zips and archives directories. | 
 
+
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+<foreignObject width="100" height="100">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <ul>
+            <li>text</li>
+        </ul>
+        <!-- Other embed HTML element/text into SVG -->
+    </div>
+</foreignObject>
+</svg>
