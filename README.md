@@ -1,6 +1,9 @@
 # NGS-dual-amplicon-processing
 Processing of dual amplicon (16S and gyrB) amplicon libraries with inline barcoding.
 
+## Table of Contents
++ [Overview](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/README.md#overview)
+
 ## Overview
 This pipleine computationally sorts amplicon Illumina libraries that contain inline barcodes. Each library consists of dual amplification of 16s and gyrB amplification for a given leaf microbiome sample. To increase multiplex capacity, I incorporated inline barcodes that were read as the first bases of sequencing. The construct details are available by request **provide citation once manuscript is published**. In brief, the constructs look like the following:
 
