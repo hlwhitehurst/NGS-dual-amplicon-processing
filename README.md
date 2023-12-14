@@ -6,15 +6,57 @@ This pipleine computationally sorts amplicon Illumina libraries that contain inl
 
 5' N7 barcoded adapter--F inline barcode--F primer--amplicon--R primer--R inline barcode -- i5 barcoded adapter 3'
 
-## Dependencies
-+ [FastQC] v 0.11.9
+## Dependencies 
++ [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) v 0.11.9
++ [MultiQC](https://multiqc.info/) v 1.9
 + [Figaro](https://github.com/Zymo-Research/figaro) v 1.1.2
-+ [BBTools Suite](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/)
++ [BBTools Suite](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/) v 38.91
 + [seqtk](https://github.com/lh3/seqtk.git) v 1.3 (r106)
 
-## Final Directory Structure
+## Directory Structure
+The starting directory structure requires the fastQ files be in the 01_SeqOutput directory. FastQ files are available in NCBI under the project **share project ID once published** Reference files and scripts are stored in their respective directories, and are available in this github repository. 
+
+The scripts build the directories as you progress in through the pipelines. See the script section below for details.
+
+### Starting Directory Structure
+├── 01_SeqOutput 
+├── ref
+│   ├── adapters.fa
+│   ├── FwdInlineTags.fa
+│   ├── RevInlineTags.fa
+├── scripts
+│   ├── 01a_FastQC.sh
+│   ├── 01b_MultiQC.sh
+│   ├── 02_AmpliconMatch.sh
+│   ├── 03a_figaro-LOCAL.sh
+│   ├── 03b_InlineBarcodeSorting.sh
+│   ├── 04a_ReadCounts.sh
+│   └── 04b_HouseKeeping.sh
+
+### Final Directory Structure
+├── 01_SeqOutput 
+├── 02_AmpliconSorted 
+│   ├── 16S
+│   ├── gyrB
+├── 03_InlineSorted
+│   ├── 16S
+│   ├── gyrB
+├── fastqc-reports
+├── figaro
+├── readcounts
+├── ref
+│   ├── adapters.fa
+│   ├── FwdInlineTags.fa
+│   ├── RevInlineTags.fa
+├── scripts
+
 
 ## Pipeline
+
+The scripts are numbered both as the order they are used and also according to the directories to which they output. For example, the 01a_FastQC and 01b_MultiQC refer to the fastQ files in the 01_SeqOutput Directory. 02_AmpliconMatch.sh outputs to the 02_AmpliconSorted directory, etc.
+
+All scripts were run on the NYU Greene HPC, except for the Figaro script which was run on my local computer. 
+
 | Script Name | Description| 
 | -------------| ------------| 
 | 1) 01a_FastQC.sh | Generate FastQC files for all Illumina FastQ files contained in directory "01_SeqOutput" |
