@@ -7,15 +7,16 @@ This pipleine computationally sorts amplicon Illumina libraries that contain inl
 5' N7 barcoded adapter--F inline barcode--F primer--amplicon--R primer--R inline barcode -- i5 barcoded adapter 3'
 
 ## Dependencies
-[FastQC] v 0.11.9
-[Figaro](https://github.com/Zymo-Research/figaro) v 1.1.2
-[BBTools Suite](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/)
-[seqtk](https://github.com/lh3/seqtk.git) v 1.3 (r106)
++ [FastQC] v 0.11.9
++ [Figaro](https://github.com/Zymo-Research/figaro) v 1.1.2
++ [BBTools Suite](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/)
++ [seqtk](https://github.com/lh3/seqtk.git) v 1.3 (r106)
 
 ## Final Directory Structure
 
 ## Pipeline
--------------------
+| Script Name | Description| 
+| -------------| ------------| 
 | 1) 01a_FastQC.sh | Generate FastQC files for all Illumina FastQ files contained in directory "01_SeqOutput" |
 | 2) 01b_MultiQC.sh | Summarize all FastQC Files in a MultiQC file |
 | 3) 02_AmpliconMatch.sh | Sort all amplicons that match gyrB primers into gyrB directory, while non-matching sort to 16S directory | 
@@ -23,4 +24,4 @@ This pipleine computationally sorts amplicon Illumina libraries that contain inl
 | 5) 03b_InlineBarcodeSorting.sh | Trim off Illumina adapters. Sort reads based on inline barcodes, then trim off inline barcodes and primers|
 | 6) 04a_ReadCounts.sh | Perform read counts on all files to track how many reads were removed/carried through each step. This is particularly useful to catch any steps that are disporoportionally causing the loss of reads. |
 | 7) 04b_HouseKeeping.sh | Should be done after reviewing the read counts. Removes all intermediate files, then zips and archives directories. | 
--------------------
+
