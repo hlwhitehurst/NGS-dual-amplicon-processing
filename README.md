@@ -19,7 +19,8 @@ The starting directory structure requires the fastQ files be in the 01_SeqOutput
 The scripts build the directories as you progress in through the pipelines. See the script section below for details.
 
 ### Starting Directory Structure
-├── 01_SeqOutput 
+```
+├── 01_SeqOutput ** Note: this is where all FastQ files should start
 ├── ref
 │   ├── adapters.fa
 │   ├── FwdInlineTags.fa
@@ -32,14 +33,15 @@ The scripts build the directories as you progress in through the pipelines. See 
 │   ├── 03b_InlineBarcodeSorting.sh
 │   ├── 04a_ReadCounts.sh
 │   └── 04b_HouseKeeping.sh
-
+```
 ### Final Directory Structure
+```
 ├── 01_SeqOutput 
 ├── 02_AmpliconSorted 
 │   ├── 16S
 │   ├── gyrB
 ├── 03_InlineSorted
-│   ├── 16S
+│   ├── 16S 
 │   ├── gyrB
 ├── fastqc-reports
 ├── figaro
@@ -49,7 +51,14 @@ The scripts build the directories as you progress in through the pipelines. See 
 │   ├── FwdInlineTags.fa
 │   ├── RevInlineTags.fa
 ├── scripts
-
+│   ├── 01a_FastQC.sh
+│   ├── 01b_MultiQC.sh
+│   ├── 02_AmpliconMatch.sh
+│   ├── 03a_figaro-LOCAL.sh
+│   ├── 03b_InlineBarcodeSorting.sh
+│   ├── 04a_ReadCounts.sh
+│   └── 04b_HouseKeeping.sh
+```
 
 ## Pipeline
 
