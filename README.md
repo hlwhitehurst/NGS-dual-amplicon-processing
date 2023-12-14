@@ -3,6 +3,9 @@ Processing of dual amplicon (16S and gyrB) amplicon libraries with inline barcod
 
 ## Table of Contents
 + [Overview](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/README.md#overview)
++ [Dependencies](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/README.md#dependencies)
++ [Directory structure](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/README.md#directory-structure)
++ [Script Pipeline](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/README.md#script-pipeline)
 
 ## Overview
 This pipleine computationally sorts amplicon Illumina libraries that contain inline barcodes. Each library consists of dual amplification of 16s and gyrB amplification for a given leaf microbiome sample. To increase multiplex capacity, I incorporated inline barcodes that were read as the first bases of sequencing. The construct details are available by request **provide citation once manuscript is published**. In brief, the constructs look like the following:
@@ -63,7 +66,7 @@ The scripts build the directories as you progress in through the pipelines. See 
 │   └── 04b_HouseKeeping.sh
 ```
 
-## Pipeline
+## Script Pipeline
 
 The scripts are numbered both as the order they are used and also according to the directories to which they output. For example, the 01a_FastQC and 01b_MultiQC refer to the fastQ files in the 01_SeqOutput Directory. 02_AmpliconMatch.sh outputs to the 02_AmpliconSorted directory, etc.
 
