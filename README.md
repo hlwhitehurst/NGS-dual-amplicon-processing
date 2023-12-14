@@ -95,7 +95,7 @@ All scripts were run on the NYU Greene HPC, except for the Figaro script which w
         <ul>
             <li>text</li>
         </ul>
-        <!-- Other embed HTML element/text into SVG -->
+        [<!-- Other embed HTML element/text into SVG -->][test](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/multiqc_report.html)https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/multiqc_report.html)
     </div>
 </foreignObject>
 </svg>
