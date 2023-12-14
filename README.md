@@ -1,16 +1,19 @@
 # NGS-dual-amplicon-processing
 Processing of dual amplicon (16S and gyrB) amplicon libraries with inline barcoding.
 
+
 ## Table of Contents
 + [Overview](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/README.md#overview)
 + [Dependencies](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/README.md#dependencies)
 + [Directory structure](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/README.md#directory-structure)
 + [Script Pipeline](https://github.com/hlwhitehurst/NGS-dual-amplicon-processing/blob/main/README.md#script-pipeline)
 
+
 ## Overview
 This pipleine computationally sorts amplicon Illumina libraries that contain inline barcodes. Each library consists of dual amplification of 16s and gyrB amplification for a given leaf microbiome sample. To increase multiplex capacity, I incorporated inline barcodes that were read as the first bases of sequencing. The construct details are available by request **provide citation once manuscript is published**. In brief, the constructs look like the following:
 
 5' N7 barcoded adapter--F inline barcode--F primer--amplicon--R primer--R inline barcode -- i5 barcoded adapter 3'
+
 
 ## Dependencies 
 + [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) v 0.11.9
@@ -19,10 +22,12 @@ This pipleine computationally sorts amplicon Illumina libraries that contain inl
 + [BBTools Suite](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/) v 38.91
 + [seqtk](https://github.com/lh3/seqtk.git) v 1.3 (r106)
 
+
 ## Directory Structure
 The starting directory structure requires the fastQ files be in the 01_SeqOutput directory. FastQ files are available in NCBI under the project **share project ID once published** Reference files and scripts are stored in their respective directories, and are available in this github repository. 
 
 The scripts build the directories as you progress in through the pipelines. See the script section below for details.
+
 
 ### Starting Directory Structure
 ```
@@ -65,6 +70,7 @@ The scripts build the directories as you progress in through the pipelines. See 
 │   ├── 04a_ReadCounts.sh
 │   └── 04b_HouseKeeping.sh
 ```
+
 
 ## Script Pipeline
 
