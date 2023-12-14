@@ -2,7 +2,7 @@
 Processing of dual amplicon (16S and gyrB) amplicon libraries with inline barcoding.
 
 ## Overview
-This pipleine computationally sorts amplicon Illumina libraries that contain inline barcodes. Each library consists of 16s and gyrB amplification of leaf communities. To increase multiplex capacity, I incorporated inline barcodes that were read as the first bases of sequencing. The construct details are available by request *(will provide citation once manuscript is published). In brief, the constructs look like the following:
+This pipleine computationally sorts amplicon Illumina libraries that contain inline barcodes. Each library consists of dual amplification of 16s and gyrB amplification for a given leaf microbiome sample. To increase multiplex capacity, I incorporated inline barcodes that were read as the first bases of sequencing. The construct details are available by request **provide citation once manuscript is published**. In brief, the constructs look like the following:
 
 5' N7 barcoded adapter--F inline barcode--F primer--amplicon--R primer--R inline barcode -- i5 barcoded adapter 3'
 
